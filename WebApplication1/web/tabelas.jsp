@@ -45,7 +45,6 @@ and open the template in the editor.
     <body>
        <div class="centered">
                             <div class="col-sm-7">
-
                                 <h3>Tabela de vôos</h3>
                                 <table class="table table-hover">
                                     <thead>
@@ -59,11 +58,21 @@ and open the template in the editor.
                                             <tr>
                                                 <td>${passagem.aeroportoIda}</td>
                                                 <td>${passagem.aeroportoVolta}</td>
+                                                <td>${passagem.dataIda}</td>>
                                                 <td>${passagem.assentos}</td>
+                                                <td>  <input type="radio" name="passagemSelect" value="passagem" /> </td>
                                             </tr>
                                         </c:forEach>
-                                    </tbody>
+                                            <div class="row">
+                                
+                                    </div>
+                                 </tbody>
+                                 
                                 </table>
+                                        <div class="form-group col-xs-12 text-center">
+                                    <br>
+                                    <button type="submit" class="btn btn-success btn-lg">Selecionar</button>
+                                </div>
                             </div>
     </body>
 </html>
