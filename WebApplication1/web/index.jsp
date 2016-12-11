@@ -39,6 +39,8 @@
         <!--  jQuery -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
+        
+        
         <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
         <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
 
@@ -46,6 +48,7 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
+        
     </head>
 
     <body id="page-top" class="index">
@@ -102,14 +105,16 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <form name="sentMessage"   action="CompraPassagemServlet">
+                        <form name="sentMessage"   action="CompraPassagem" method="post">
                             <div class="form-group">
 
                                 <div class="col-sm-11">
                                     <label for="de" class="col-sm-1 control-label">De</label>
                                     <select id="country" class="form-control">
-                                        <option value="GALEAO">Galeão</option>
-                                        <option value="Santos">Santos Dummont</option>
+                                        <option value="GAL">Galeão - Rio de Janeiro</option>
+                                        <option value="SAN">Santos Dummont - Rio de Janeiro</option>
+                                        <option value="CON">Congonhas - São Paulo</option>
+                                        <option value="GUA">Guarulhos - São Paulo</option>
                                     </select>
                                 </div>
                                 <br></div> <!-- /.form-group -->
@@ -119,8 +124,10 @@
                                 <div class="col-sm-11">
                                     <label for="para" class="col-sm-1 control-label">Para</label>
                                     <select name="country" class="form-control">
-                                        <option value="TEXAS AIRPORT">Texas Airport</option>
-                                        <option value="2">Canada Airport</option>
+                                        <option value="TEX">Texas Airport - Estados Unidos</option>
+                                        <option value="CAN">Canada Airport - Canadá</option>
+                                        <option value="POR">Porto - Portugal</option>
+                                        <option value="FRA">France - França</option>
                                     </select>
                                 </div>
                             </div> <!-- /.form-group -->
@@ -162,33 +169,9 @@
                                 </div>
                             </div>
                         </form>
+                        
 
-
-
-                        <div class="centered">
-                            <div class="col-sm-7">
-
-                                <jsp:useBean id="dao" class="model.DAO.PassagemDAO" />
-                                <h3>Tabela de vôos</h3>
-                                <table class="table table-hover">
-                                    <thead>
-                                    <th>Aeroporto 1</th>
-                                    <th>Aeroporto 2</th>
-                                    <th>Assentos</th>
-                                    </thead>
-
-                                    <tbody>
-                                        <c:forEach var="passagem" items="${dao.todasPassagens}">
-                                            <tr>
-                                                <td>${passagem.aeroportoVolta}</td>
-                                                <td>${passagem.aeroportoIda}</td>
-                                                <td>${passagem.assentos}</td>
-                                            </tr>
-                                        </c:forEach>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div> <!-- End Div ROW -->
             </div> <!-- End Div Container -->

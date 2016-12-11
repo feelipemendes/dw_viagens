@@ -14,7 +14,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Passagem;
+import model.entidades.Passagem;
+import model.entidades.Passagem;
 
 
 /**
