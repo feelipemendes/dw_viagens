@@ -64,14 +64,13 @@
                     <a class="navbar-brand" href="#page-top">Dw Viagens </a><img class="img-responsive" id="img-ico" src="img/airplane-ico2.png" alt="airplane-icone">
                 </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="hidden">
                             <a href="#page-top"></a>
                         </li>
                         <li class="page-scroll">
-                            <a href="#portfolio">Destinos</a>
+                            <a href="#passagem">Comprar Passagem</a>
                         </li>
                         <li class="page-scroll">
                             <a href="#about">About</a>
@@ -79,12 +78,15 @@
                         <li class="page-scroll">
                             <a href="#contact">Contact</a>
                         </li>
-
-
-                        <li class="page-scroll">
-                            <a href="signin.jsp">Login</a>
-                        </li>
-
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" href="#"><%= request.getSession().getAttribute("nome")%><span class="caret"></span></a>
+                            <ul id="menu-login" class="dropdown-menu">
+                                <li><a href="#">home</a></li>
+                                <li><a href="#">minhas compras</a></li>
+                                <li><a href="#">configurações</a></li>
+                                <li><a href="LogoutServlet">Logout</a></li>
+                            </ul>
+                        </li>    
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

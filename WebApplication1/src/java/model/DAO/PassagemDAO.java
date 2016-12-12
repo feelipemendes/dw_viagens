@@ -68,6 +68,8 @@ public class PassagemDAO {
             while(rs.next()) {
           
                 Passagem p = new Passagem();
+                
+                p.setId(rs.getInt("ID"));
                 p.setAeroportoIda(rs.getString("AEROPORTO_IDA"));
                 p.setAeroportoVolta(rs.getString("AEROPORTO_VOLTA"));
                 p.setAssentos(rs.getString("ASSENTOS"));
@@ -99,6 +101,7 @@ public class PassagemDAO {
             while(rs.next()) {
               
                 Passagem p = new Passagem();
+                p.setId(rs.getInt("ID"));
                 p.setAeroportoIda(rs.getString("AEROPORTO_IDA"));
                 p.setAeroportoVolta(rs.getString("AEROPORTO_VOLTA"));
                 p.setAssentos(rs.getString("ASSENTOS"));

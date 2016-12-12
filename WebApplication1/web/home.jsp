@@ -69,7 +69,7 @@
                             <a href="#page-top"></a>
                         </li>
                         <li class="page-scroll">
-                            <a href="#portfolio">Comprar Passagem</a>
+                            <a href="#passagem">Comprar Passagem</a>
                         </li>
                         <li class="page-scroll">
                             <a href="#about">About</a>
