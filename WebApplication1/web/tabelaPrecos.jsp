@@ -123,10 +123,10 @@ and open the template in the editor.
         </nav>
     <section id="passagem">
         <div class="container">
-        <form action="Passagem">
+        <form action="">
                          <div class="centered">
                             <div class="col-sm-7">
-                                <h3>Tabela de vôos</h3>
+                                <h3>Tabela de preços</h3>
                                 <table class="table table-hover">
                                     <thead>
                                         <th>Aeroporto partida</th>

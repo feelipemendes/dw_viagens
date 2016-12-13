@@ -16,7 +16,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import util.DataUtil;
 import model.entidades.Passagem;
 import model.DAO.PassagemDAO;
 
@@ -41,22 +40,12 @@ public class PassagemServlet extends HttpServlet {
      */
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            String viagemDe = request.getParameter("viagemDe");
-            String viagemPara = request.getParameter("viagemPara");
-            String dataIdaStr = request.getParameter("dataIda");
-            String dataVoltaStr = request.getParameter("dataVolta");
-            String assentos = request.getParameter("assentos");
+            
+            String id = request.getParameter("id");
             
             // monta um objeto contato
             
             Passagem passagem = new Passagem();
-            passagem.setAeroportoIda(viagemDe);
-            passagem.setAeroportoVolta(viagemPara);
-            passagem.setAssentos(assentos);
-            
-            passagem.setDataIda(DataUtil.converteParaSQLDate(dataIdaStr));
-            passagem.setDataVolta(DataUtil.converteParaSQLDate(dataVoltaStr));
-            
                             
             PassagemDAO dao = new PassagemDAO();
             List<Passagem> passagens = dao.getTodasPassagens();

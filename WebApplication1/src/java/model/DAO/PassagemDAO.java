@@ -13,6 +13,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import model.entidades.Passagem;
 import model.entidades.Passagem;
@@ -115,5 +117,27 @@ public class PassagemDAO {
             System.out.println("Falha ao retornar lista com todas as passagens");
             throw new RuntimeException(u);   
          }
+    }
+    
+    public List<Passagem> buscaPrecoPassagemPorId() {
+          String sql = "Select * from precos_passagem WHERE passagem_id = ? ";
+        ArrayList<Passagem> passagens = new ArrayList<>();
+        
+        try {     
+            PreparedStatement stmt = connect.prepareStatement(sql);
+            
+            ResultSet rs = stmt.executeQuery();
+            
+            while(rs.next()) {
+            
+            }   
+            
+            return passagens;
+     
+        }  catch (SQLException ex) {
+                System.out.println("Falha ao retornar lista com todas as passagens");
+            throw new RuntimeException(ex);   
+        }
+
     }
 }
