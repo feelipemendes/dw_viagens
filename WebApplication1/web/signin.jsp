@@ -51,7 +51,8 @@ and open the template in the editor.
     <body>
         <div class="container">
 
-            <form class="form-signin" action="LoginServlet" method="post">
+            <form class="form-signin col-md-3 col-md-offset-4" action="LoginServlet" method="post">
+                <img class="img-responsive img-center" src="img/airplane.png">
                 <h2 class="form-signin-heading">Please sign in</h2>
                 <label for="inputEmail" class="sr-only">Email address</label>
                 <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required="" autofocus="">
@@ -64,5 +65,6 @@ and open the template in the editor.
                 </div>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
             </form>
+        </div>
     </body>
 </html>
