@@ -56,7 +56,7 @@ public class CompraPassagemServlet extends HttpServlet {
             
                             
             PassagemDAO dao = new PassagemDAO();
-            List<Passagem> passagens = dao.getTodasPassagens();
+            List<Passagem> passagens = dao.buscaPassagem(passagem);
             
             request.setAttribute("passagens", passagens);
             

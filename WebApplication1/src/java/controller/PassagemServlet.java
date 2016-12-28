@@ -25,7 +25,7 @@ public class PassagemServlet extends HttpServlet {
                 
         request.setAttribute("precos", precos);
         RequestDispatcher rd = request.getRequestDispatcher("/tabelaPrecos.jsp");
-         rd.forward(request, response);
+        rd.forward(request, response);
         }   
  }
 

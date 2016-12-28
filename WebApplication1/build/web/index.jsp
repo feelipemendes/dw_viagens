@@ -65,7 +65,7 @@
                             <div class="form-group">
 
                                 <div class="col-sm-11">
-                                    <label for="de" class="col-sm-1 control-label">De</label>
+                                    <label for="viagemDe" class="col-sm-1 control-label">De</label>
                                     <select id="country" class="form-control">
                                         <option value="GAL">Galeão - Rio de Janeiro</option>
                                         <option value="SAN">Santos Dummont - Rio de Janeiro</option>
@@ -78,7 +78,7 @@
                             <div class="form-group">
 
                                 <div class="col-sm-11">
-                                    <label for="para" class="col-sm-1 control-label">Para</label>
+                                    <label for="viagemPara" class="col-sm-1 control-label">Para</label>
                                     <select name="country" class="form-control">
                                         <option value="TEX">Texas Airport - Estados Unidos</option>
                                         <option value="CAN">Canada Airport - Canadá</option>
