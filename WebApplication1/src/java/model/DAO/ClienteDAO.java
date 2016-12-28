@@ -9,7 +9,7 @@ import controller.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import model.entidades.Cliente;
+import model.entidade.Cliente;
 
 /**
  *

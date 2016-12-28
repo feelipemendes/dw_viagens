@@ -16,15 +16,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.entidade.Passagem;
 import model.DAO.PassagemDAO;
-import model.entidades.Passagem;
 import util.DataUtil;
-import util.DataUtil;
-import model.entidades.Passagem;
-import model.DAO.PassagemDAO;
-
-
-
 
 /**
  *

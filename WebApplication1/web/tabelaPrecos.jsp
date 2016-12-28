@@ -129,20 +129,19 @@ and open the template in the editor.
                                 <h3>Tabela de preços</h3>
                                 <table class="table table-hover">
                                     <thead>
-                                        <th>Aeroporto partida</th>
-                                        <th>Aeroporto volta</th>
-                                        <th>Assentos</th>
-                                        <th>Selecione</th>
-                                        
+                                        <th>Executivo</th>
+                                        <th>Selecionar</th>
+                                        <th>Primeira classe</th>
+                                        <th>Selecionar</th>
                                     </thead>
                                     <tbody>
-                                        <jsp:useBean id="passagens" class="java.util.List" scope="request"/>
-                                        <c:forEach var="passagem" items="${passagens}">
+                                        <jsp:useBean id="precos" class="java.util.List" scope="request"/>
+                                        <c:forEach var="precos" items="${precos}">
                                             <tr>
-                                                <td>${passagem.aeroportoIda}</td>
-                                                <td>${passagem.aeroportoVolta}</td>
-                                                <td>${passagem.assentos}</td>
-                                                <td>  <input type="radio" name="passagemSelect" value="${passagem.id}" /> </td>                                        
+                                                <td>${precos.executiva}</td>
+                                                <td>  <input type="radio" name="precoExecutiva" value="${precos.id}" /> </td>   
+                                                <td>${precos.primeiraClasse}</td>
+                                                <td>  <input type="radio" name="precoPrimeira" value="${precos.id}" /> </td>                                        
                                             </tr>
                                         </c:forEach>
                                             <div class="row">

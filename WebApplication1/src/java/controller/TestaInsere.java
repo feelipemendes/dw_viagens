@@ -7,7 +7,7 @@ package controller;
 
 import model.DAO.UsuarioDao;
 import java.sql.SQLException;
-import model.entidades.Usuario;
+import model.entidade.Usuario;
 
 public class TestaInsere {
     public static void main(String[] args) throws SQLException {

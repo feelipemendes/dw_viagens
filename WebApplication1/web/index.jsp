@@ -61,11 +61,73 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
+                        <form name="sentMessage"   action="CompraPassagem" method="post">
+                            <div class="form-group">
 
-                        <!-- BEGIN formulario compra passagem
-                        <c:import url="form_passagem.jsp"/>
-                        END -->
+                                <div class="col-sm-11">
+                                    <label for="de" class="col-sm-1 control-label">De</label>
+                                    <select id="country" class="form-control">
+                                        <option value="GAL">Galeão - Rio de Janeiro</option>
+                                        <option value="SAN">Santos Dummont - Rio de Janeiro</option>
+                                        <option value="CON">Congonhas - São Paulo</option>
+                                        <option value="GUA">Guarulhos - São Paulo</option>
+                                    </select>
+                                </div>
+                                <br></div> <!-- /.form-group -->
 
+                            <div class="form-group">
+
+                                <div class="col-sm-11">
+                                    <label for="para" class="col-sm-1 control-label">Para</label>
+                                    <select name="country" class="form-control">
+                                        <option value="TEX">Texas Airport - Estados Unidos</option>
+                                        <option value="CAN">Canada Airport - Canadá</option>
+                                        <option value="POR">Porto - Portugal</option>
+                                        <option value="FRA">France - França</option>
+                                    </select>
+                    </div>
+                            </div> <!-- /.form-group -->
+
+
+                            <br><br>
+                            <div class="form-group">
+
+                                <div class="col-sm-4">
+                                    <label for="para" class="col-sm-1 control-label">Ida</label>
+                                    <input type="date" class="form-control" name="dataIda">
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="para" class="col-sm-1 control-label">Volta</label>
+                                    <input type="date" class="form-control" name="dataVolta">
+                                </div>
+
+
+                                <div class="col-sm-3">    
+                                    <label for="para" class="col-sm-1 control-label">Assentos</label>   
+                                    <select name="assentos" class="form-control">
+                                        <option value="">Máx. 5</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div> 
+
+                            <!-- botao de buscar -->
+                            <div id="success"></div>
+                            <div class="row">
+                                <div class="form-group col-xs-12 text-center">
+                                    <br>
+                                    <button type="submit" class="btn btn-success btn-lg">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                        
+
+                        
                     </div>
                 </div> <!-- End Div ROW -->
             </div> <!-- End Div Container -->

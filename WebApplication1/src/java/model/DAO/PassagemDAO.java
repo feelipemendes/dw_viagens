@@ -13,11 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import model.entidades.Passagem;
-import model.entidades.Passagem;
+import model.entidade.Passagem;
 
 
 /**
@@ -119,7 +115,7 @@ public class PassagemDAO {
          }
     }
     
-    public List<Passagem> buscaPrecoPassagemPorId() {
+    public List<Passagem> buscaPrecoPassagemPorId(Passagem p) {
           String sql = "Select * from precos_passagem WHERE passagem_id = ? ";
         ArrayList<Passagem> passagens = new ArrayList<>();
         

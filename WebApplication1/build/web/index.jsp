@@ -1,55 +1,11 @@
-<%-- 
-    Document   : index
-    Created on : 28/11/2016, 22:30:51
-    Author     : Luiz
---%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <title>Dw Viagens - Index</title>
-
-        <!-- Bootstrap Core CSS -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Theme CSS -->
-        <link href="css/freelancer.min.css" rel="stylesheet">
-
-        <!-- Custom Fonts -->
-        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <link rel="icon" type="img/ico" href="img/ico/favicon.ico">
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        <!--  jQuery -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-        
-        
-        <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
-        <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
-
-        <!-- Bootstrap Date-Picker Plugin -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
-        
-    </head>
+    <!-- Begin Head -->
+    <c:import url="head.jsp"/>
+    <!-- Fim Head -->
 
     <body id="page-top" class="index">
 
@@ -64,13 +20,14 @@
                     <a class="navbar-brand" href="#page-top">Dw Viagens </a><img class="img-responsive" id="img-ico" src="img/airplane-ico2.png" alt="airplane-icone">
                 </div>
 
+                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="hidden">
                             <a href="#page-top"></a>
                         </li>
                         <li class="page-scroll">
-                            <a href="#passagem">Comprar Passagem</a>
+                            <a href="#portfolio">Destinos</a>
                         </li>
                         <li class="page-scroll">
                             <a href="#about">About</a>
@@ -78,15 +35,12 @@
                         <li class="page-scroll">
                             <a href="#contact">Contact</a>
                         </li>
-                        <li class="dropdown">
-                            <a data-toggle="dropdown" href="#"><%= request.getSession().getAttribute("nome")%><span class="caret"></span></a>
-                            <ul id="menu-login" class="dropdown-menu">
-                                <li><a href="#">home</a></li>
-                                <li><a href="#">minhas compras</a></li>
-                                <li><a href="#">configurações</a></li>
-                                <li><a href="LogoutServlet">Logout</a></li>
-                            </ul>
-                        </li>    
+
+
+                        <li class="page-scroll">
+                            <a href="signin.jsp">Login</a>
+                        </li>
+
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -131,7 +85,7 @@
                                         <option value="POR">Porto - Portugal</option>
                                         <option value="FRA">France - França</option>
                                     </select>
-                                </div>
+                    </div>
                             </div> <!-- /.form-group -->
 
 
@@ -177,6 +131,7 @@
                     </div>
                 </div> <!-- End Div ROW -->
             </div> <!-- End Div Container -->
+
 
         </section>
 
@@ -328,52 +283,9 @@
         </section>
 
         <!-- Footer -->
-        <footer class="text-center">
-            <div class="footer-above">
-                <div class="container">
-                    <div class="row">
-                        <div class="footer-col col-md-4">
-                            <h3>Location</h3>
-                            <p>3481 Melrose Place
-                                <br>Beverly Hills, CA 90210</p>
-                        </div>
-                        <div class="footer-col col-md-4">
-                            <h3>Around the Web</h3>
-                            <ul class="list-inline">
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer-col col-md-4">
-                            <h3>About Freelancer</h3>
-                            <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-below">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            Copyright &copy; Your Website 2016
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <!-- Begin Footer -->
+        <c:import url="footer.jsp"/>
+        <!-- Fim Footer -->
 
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
         <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
